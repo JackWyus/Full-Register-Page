@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Full Register Page</title>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <form action="processa_form.php" method="post"> <!-- https://www.w3schools.com/html/html_forms.asp e https://www.w3schools.com/php/php_form_validation.asp ESTUDARRRRR-->
+            <fieldset>
+                <legend>Dados Gerais</legend> <!-- https://www.w3schools.com/tags/tag_legend.asp-->
+
+                <label for="Nome_Completo" id="Nome_Completo">Nome Completo:</label> <!-- https://www.w3schools.com/tags/tag_label.asp -->
+                <input type="text" required>
+
+                <label for="CPF" id="CPF">CPF:</label>
+                <input type="text" maxlength="11" minlength="11" name="CPF" required />
+
+                <label for="Email" id="Email">Email:</label>
+                <input type="email" placeholder="Teste@teste.com" required>
+
+                <label for="Celular" id="Celular">Celular:</label>
+                <input type="tel" maxlength="13" placeholder="62-99999-9999">
+
+                <label for="Data_de_Nascimento" id="Data_de_Nascimento">Data de Nascimento:</label>
+                <input type="date">
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                
+                <label for="Tipo" id="Tipo">Tipo</label>
+                <select name="Tipo_de_Endereço"> <!-- https://www.w3schools.com/tags/tag_select.asp -->
+                    <option>Selecione</option>
+                    <option>Rua</option>
+                    <option>Avenida</option>
+                    <option>Rodovia</option>
+                    <option>Br</option>
+                    <option>Outro</option>
+                </select>
+
+                <label for="Logradouro" id="Logradouro">Logradouro:</label>
+                <input type="text">
+                
+                <label for="Número_endereço" id="Número_endereço">Nº:</label>
+                <input type="text">
+
+                <label for="Complemento_Endereço" id="Complemento_Endereço">Complemento:</label>
+                <input type="text">
+            </fieldset>
+                
+            <fieldset>
+                <legend>Fale Conosco</legend>
+
+                <input type="radio" name="Tipo_msg">
+                <label for="Sugestão" id="Sugestão">Sugestão</label>
+
+                <input type="radio" name="Tipo_msg">
+                <label for="Elogio" id="Elogio">Elogio</label>
+
+                <input type="radio" name="Tipo_msg">
+                <label for="Crítica" id="Crítica">Crítica</label>
+
+                <br>
+
+                <label for="Texto" id="Texto"></label>
+                <textarea rows="20" cols="52">Escreva aqui</textarea> <!--https://www.w3schools.com/tags/tag_textarea.asp-->
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Enviar Mensagem</button>
+                <button type="reset">Limpar o Formulário</button>
+            </fieldset>
+
+        </form>
+    </body>
+</html>
